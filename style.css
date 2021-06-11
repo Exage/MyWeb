@@ -299,6 +299,7 @@ button {
   margin-right: auto;
   margin-left: auto;
   display: flex;
+  align-items: center;
 }
 .header__nav::before {
   content: "Меню";
