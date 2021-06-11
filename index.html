@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Онлайн-курс</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<!-- SVG Sprites -->
+<svg display="none">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="burger">
+        <path d="M479.18 91.897H32.821C14.69 91.897 0 77.207 0 59.077s14.69-32.821 32.821-32.821H479.18c18.13 0 32.82 14.69 32.82 32.821s-14.69 32.82-32.82 32.82zM295.385 288.821H32.821C14.69 288.821 0 274.13 0 256s14.69-32.821 32.821-32.821h262.564c18.13 0 32.821 14.69 32.821 32.821s-14.691 32.821-32.821 32.821z" fill="#fff"></path>
+        <path d="M479.18 288.821h-52.513c-18.13 0-32.821-14.69-32.821-32.821s14.69-32.821 32.821-32.821h52.513c18.13 0 32.82 14.69 32.82 32.821s-14.69 32.821-32.82 32.821z" fill="#fff"></path>
+        <path d="M479.18 485.744H32.821C14.69 485.744 0 471.053 0 452.923c0-18.13 14.69-32.821 32.821-32.821H479.18c18.13 0 32.82 14.69 32.82 32.821 0 18.13-14.69 32.821-32.82 32.821z" fill="#fff"></path>
+    </symbol>
+</svg>
+
+<div class="page">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner">
+
+            <div class="header__logo">
+                <img src="images/logo.svg" alt="Здесь могло быть выше лого">
+            </div>
+            <nav class="header__nav">
+                <a href="#" class="nav__link">Главная</a>
+                <a href="#" class="nav__link">Курсы</a>
+                <a href="#" class="nav__link">Расписание</a>
+                <a href="#" class="nav__link">Преподователи</a>
+                <a href="#" class="nav__link">Рассылка</a>
+                <a href="#" class="nav__link">Контакты</a>
+            </nav>
+            <button type="button" class="burger__button">
+                <svg class="burger">
+                    <use xlink:href="#burger"></use>
+                </svg>
+            </button>
+            <button class="btn btn--purple">
+                Зайти в кабинет
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <div class="intro">
+        <div class="container">
+
+            <div class="intro__content">
+
+                <h1 class="intro__title" style="padding-bottom: 11rem">Первый курс<br>по компьютерной сборке</h1>
+                <div class="intro__timer" style="display: none">
+                    <div class="intro__timer--block">
+                        <div class="intro__timer--date">18</div>
+                        <div class="intro__timer--datename">дней</div>
+                    </div>
+                    <div class="intro__timer--block">
+                        <div class="intro__timer--date">18</div>
+                        <div class="intro__timer--datename">часов</div>
+                    </div>
+                    <div class="intro__timer--block">
+                        <div class="intro__timer--date">18</div>
+                        <div class="intro__timer--datename">минут</div>
+                    </div>
+                    <div class="intro__timer--block">
+                        <div class="intro__timer--date">18</div>
+                        <div class="intro__timer--datename">секунд</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Order -->
+    <div class="order">
+        <div class="container">
+
+            <div class="order__inner">
+                <button class="btn btn--cherry btn__order">Заказать курс</button>
+
+                <div class="order__students">
+                    <div class="order__span">Учеников всего:
+                        <span class="order__span--number">200</span>
+                    </div>
+                    <div class="order__span">Успешно закончили курс:
+                        <span class="order__span--number">190</span>
+                    </div>
+                </div>
+
+                <div class="order__progress">
+                    <div class="order__progress--header">
+                        <div class="order__span">
+                            Заработано учениками:
+                            <div class="order__span--number">400 000₽</div>
+                        </div>
+                    </div>
+                    <div class="order__progress--body">
+                        <div class="order__progress--line"></div>
+                    </div>
+                    <div class="order__progress--footer">
+                        <div class="order__span">
+                            0
+                        </div>
+                        <div class="order__span">
+                            1 000 000₽
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="about">
+        <div class="container">
+            <div class="about__inner">
+
+                <div class="about__inner--image">
+                    <img src="images/about-pc.png" alt="">
+                </div>
+                <div class="about__inner--text">
+                    <h1 class="title">Чем мы занимаемся?</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget neque, dignissim et feugiat elit augue in suspendisse egestas. Dictum vestibulum mi et sed nunc, orci fermentum vestibulum, morbi. Et neque, adipiscing sapien sem senectus praesent aenean consequat. Aenean facilisi turpis aliquet fringilla. Nunc sem felis sed interdum feugiat mattis elit, sollicitudin. Quam pharetra rhoncus risus, cursus id elementum aliquet. Nullam turpis arcu malesuada arcu interdum placerat nisi, lobortis.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Start -->
+    <div class="start">
+        <div class="container">
+
+            <div class="section__header icon45deg">
+                <h1 class="title">Быстрый старт</h1>
+                <p class="section__header--subtitle">
+                    Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер
+                </p>
+            </div>
+
+            <div class="start__inner">
+
+                <div class="start__block">
+                    <div class="start__block--percent">100%</div>
+                    <div class="start__block--gradient">
+                        <div class="gradient__line"></div>
+                    </div>
+                    <div class="start__block--paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                    </div>
+                </div>
+
+                <div class="start__block">
+                    <div class="start__block--percent">75%</div>
+                    <div class="start__block--gradient">
+                        <div class="gradient__line"></div>
+                    </div>
+                    <div class="start__block--paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                    </div>
+                </div>
+
+                <div class="start__block">
+                    <div class="start__block--percent">50%</div>
+                    <div class="start__block--gradient">
+                        <div class="gradient__line"></div>
+                    </div>
+                    <div class="start__block--paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                    </div>
+                </div>
+
+                <div class="start__block">
+                    <div class="start__block--percent">Итог</div>
+                    <div class="start__block--gradient">
+                        <div class="gradient__line"></div>
+                    </div>
+                    <div class="start__block--paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Advantages -->
+    <div class="advantages">
+        <div class="container">
+            <div class="title">Получите профессию прямо сейчас</div>
+            <div class="advantages__inner">
+
+                <div class="advantage__block">
+                    <div class="advantage__block--image">
+                        <img src="images/advantages/advantage-1.svg" alt="">
+                    </div>
+                    <h1 class="advantage__block--title">
+                        Только практические<br> навыки в работе
+                    </h1>
+                    <p class="advantage__block--text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                    </p>
+                </div>
+
+                <div class="advantage__block">
+                    <div class="advantage__block--image">
+                        <img src="images/advantages/advantage-2.svg" alt="">
+                    </div>
+                    <h1 class="advantage__block--title">
+                        Работа на самом<br> современном оборудовании
+                    </h1>
+                    <p class="advantage__block--text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                    </p>
+                </div>
+
+                <div class="advantage__block">
+                    <div class="advantage__block--image">
+                        <img src="images/advantages/advantage-3.svg" alt="">
+                    </div>
+                    <h1 class="advantage__block--title">
+                        Сертификация<br> по окончании обучения
+                    </h1>
+                    <p class="advantage__block--text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus eget velit quisque accumsan amet tortor. Velit, volutpat egestas fringilla mi porttitor tempus. Placerat dui.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Partners -->
+    <div class="partners">
+        <div class="container">
+            <div class="section__header icon30deg">
+                <h1 class="title">Партнеры - топовые бренды</h1>
+            </div>
+            <div class="partners__inner">
+                <div class="partners__table">
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                    <div class="partners__table--block">
+                        <img src="images/partner-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="education-program">
+        <div class="container">
+            <div class="section__header--center icon30deg">
+                <h1 class="title">Программа обучения</h1>
+                <p class="section__header--subtitle">
+                    Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер
+                </p>
+            </div>
+
+            <div class="education-program__content">
+                <div class="education-program__content--block">
+                    <h3 class="block-title">Неделя №1</h3>
+                    <p class="block-text">Красивая часть курса,<br> которая помогает в успехе</p>
+                </div><!-- /.block -->
+                <div class="education-program__content--block">
+                    <h3 class="block-title">Неделя №2</h3>
+                    <p class="block-text">Красивая часть курса,<br> которая помогает в успехе</p>
+                </div><!-- /.block -->
+                <div class="education-program__content--block">
+                    <h3 class="block-title">Неделя №3</h3>
+                    <p class="block-text">Красивая часть курса,<br> которая помогает в успехе</p>
+                </div><!-- /.block -->
+                <div class="education-program__content--block">
+                    <h3 class="block-title">Неделя №4</h3>
+                    <p class="block-text">Красивая часть курса,<br> которая помогает в успехе</p>
+                </div><!-- /.block -->
+                <div class="education-program__content--block">
+                    <h3 class="block-title">Неделя №5</h3>
+                    <p class="block-text">Красивая часть курса,<br> которая помогает в успехе</p>
+                </div><!-- /.block -->
+                <div class="education-program__content--block">
+                    <h3 class="block-title">Неделя №6</h3>
+                    <p class="block-text">Красивая часть курса,<br> которая помогает в успехе</p>
+                </div><!-- /.block -->
+                <div class="education-program__content--block">
+                    <h3 class="block-title">Неделя №7</h3>
+                    <p class="block-text">Красивая часть курса,<br> которая помогает в успехе</p>
+                </div><!-- /.block -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Teachers -->
+    <div class="teachers">
+        <div class="container">
+            <div class="section__header">
+                <h1 class="title">Ваши преподаватели</h1>
+            </div>
+            <div class="teachers__inner">
+
+                <div class="teachers__inner--block">
+                    <div class="teachers__inner--block__photo">
+                        <img src="images/teachers/teacher-1.png" alt="">
+                    </div>
+                    <h3 class="teachers__inner--block__name">Дмитрий Иванов</h3>
+                    <p class="teachers__inner--block__specialty">Специалист по видеокартам</p>
+                    <button class="btn btn--border">Биография</button>
+                </div><!-- /.Teacher -->
+
+                <div class="teachers__inner--block">
+                    <div class="teachers__inner--block__photo">
+                        <img src="images/teachers/teacher-2.png" alt="">
+                    </div>
+                    <h3 class="teachers__inner--block__name">Дмитрий Иванов</h3>
+                    <p class="teachers__inner--block__specialty">Специалист по видеокартам</p>
+                    <button class="btn btn--border">Биография</button>
+                </div><!-- /.Teacher -->
+
+                <div class="teachers__inner--block">
+                    <div class="teachers__inner--block__photo">
+                        <img src="images/teachers/teacher-3.png" alt="">
+                    </div>
+                    <h3 class="teachers__inner--block__name">Дмитрий Иванов</h3>
+                    <p class="teachers__inner--block__specialty">Специалист по видеокартам</p>
+                    <button class="btn btn--border">Биография</button>
+                </div><!-- /.Teacher -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Mailing -->
+    <div class="mailing">
+        <div class="container">
+            <div class="section__header--center noBefore">
+                <h1 class="title">Программа обучения</h1>
+                <p class="section__header--subtitle">
+                    Больше 90% учеников прошли полный курс и смогли собрать свой первый компьютер
+                </p>
+            </div>
+            <div class="mailing__inner">
+                <div class="mailing__inner--input">
+                    <input type="text" placeholder="E-mail" class="mailing--input">
+                    <button class="btn btn--cherry btn--cherry__sm">Подписаться</button>
+                </div>
+                <div class="social">
+                    <button class="btn btn--social vk"></button>
+                    <button class="btn btn--social youtube"></button>
+                    <button class="btn btn--social facebook"></button>
+                    <button class="btn btn--social instagram"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
