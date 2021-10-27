@@ -1628,6 +1628,10 @@ button {
         padding: 1em;
         padding-bottom: 3em;
     }
+    .modal__swiper-button-prev,
+    .modal__swiper-button-next {
+        display: none;
+    }
 }
 
 @media (max-width: 983px) {
