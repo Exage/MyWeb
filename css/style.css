@@ -1306,7 +1306,7 @@ button {
 }
 
 .order__elex__btn:hover{
-    color: var(--primary);
+    color: #fff;
     background-color: rgba(0, 0, 0, 0.35);
 }
 
