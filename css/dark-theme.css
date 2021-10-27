@@ -1,0 +1,32 @@
+:root {
+    --primary: #191919;
+    --secondary: #121212;
+
+    --sec-primary: #2F2F2F;
+
+    --text: #fff;
+    --red: #c94949;
+
+    --header-box-shadow: #121212;
+
+    --bulb-color: #121212;
+    --swiper-pagination-color: #fff;
+}
+
+.exposition__item:hover .exposition__item--inner{
+    transform: translate(-24px, -24px);
+    box-shadow: 12px 12px 1px #181818,
+                24px 24px 1px #202020;
+}
+
+@media (max-width: 1320px) {
+    .exposition__item:hover .exposition__item--inner{
+        transform: translate(0, -24px);
+        box-shadow: 0 12px 1px #181818,
+                    0 24px 1px #202020;
+    }
+}
+
+.chronicle__block--cross, .modal__close {
+    background-image: url(../images/icons/cross-light.svg);
+}

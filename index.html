@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="change-theme" data-theme="dark">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <title>Museum</title>
+    <meta name="google" content="notranslate">
+</head>
+<body>
+    <!---->
+    <div class="page">
+        
+    <!--header-->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="logo">LOGO</div>
+                    <button class="header__bulb"></button>
+                    <button class="burger">
+                        <span class="burger__span"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+    <!--intro-->
+        <div class="intro">
+            <div class="intro__mask">
+                <div class="container">
+                    <div class="intro__textbox">
+                        <h1 class="intro__title">Lorem ipsum</h1>
+                        <p class="intro__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eligendi, modi perferendis voluptatibus numquam voluptatum? Sunt rem voluptate eligendi, modi at rerum vero?</p>
+                        <button class="intro__sroll--btn">scroll</button>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__bg--images">
+                <img src="images/intro/intro-bg-01.jpg" alt="" class="intro__bg">
+                <img src="images/intro/intro-bg-02.jpg" alt="" class="intro__bg">
+                <img src="images/intro/intro-bg-03.jpg" alt="" class="intro__bg">
+                <img src="images/intro/intro-bg-04.jpg" alt="" class="intro__bg">
+                <img src="images/intro/intro-bg-05.jpg" alt="" class="intro__bg">
+            </div>
+        </div>
+        
+    <!--info-->
+        <div class="info" id="info">
+            <div class="container">
+                <div class="info__inner">
+                    <i class="fas fa-info-circle"></i>
+                    <h1 class="info__title">Информация о музее</h1>
+                    <div class="info__content">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <p>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <!-- Person -->
+        <div class="person" id="person">
+            <div class="container">
+                <div class="person__photo">
+                    <img src="images/person/hovan.jpg" alt="">
+                </div>
+                <h1 class="person__name">Хован Валерий Иванович</h1>
+                <h2 class="person__date">1964 - 1987</h2>
+                <div class="person__info">
+                    <p>
+                        Родился 24 февраля 1964 года в городе Бресте. В 1981 году окончил среднюю школу № 13 в городе Брест.
+                    </p>
+                    <div class="person__info--more">
+                        <div class="person__info--more__inner">
+                            <p>
+                                С августа 1981 года по направлению Брестского объединенного горвоенкомата учился в Каменец-Подольском высшем военно-инженерном командном училище. После окончания училища служил в войсковой части 10075 (город Капсукас, Литва).
+                            </p>
+                            <p>
+                                В сентябре 1986 года направлен в Афганистан в войсковую часть полевая почта 24872.
+                            </p>
+                            <p>
+                                14 сентября 1987 года старший лейтенант В. И. Хован командовал отрядом, который сопровождал воинскую колонну. Во время марша на участке дороги Кабул - Газни рядовой И. А. Шохин обнаружил группу мин. В. И. Хован поспешил ему на помощь и подорвался на второй группе мин. От полученных ран он умер в госпитале 15 сентября 1987 года.
+                            </p>
+                            <p>
+                                Похоронен в городе Бресте на городском кладбище Плоска.
+                            </p>
+                            <p>
+                                За мужество и героизм награжден орденами Красного Знамени и Красной Звезды (посмертно), медалями «За отвагу» и «Воину-интернационалисту от благодарного афганского народа».
+                            </p>
+                        </div>
+                    </div>
+                    <button class="person__more-btn">Подробнее</button>
+                </div>
+            </div>
+        </div>
+        
+    <!-- Workers -->
+        <div class="container">
+            <div class="workers" id="workers">
+                <h1 class="workers__title">Представители</h1>
+                <div class="workers__inner">
+                    <div class="workers__button-prev"></div>
+                    <!-- Slider main container -->
+                    <div class="workers__slider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Волынец Анна<br>Петровна
+                                </h1>
+                                <h2 class="worker__work">Директор ГУО</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>    
+                            
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Левончук Валерий<br>Сергееевич
+                                </h1>
+                                <h2 class="worker__work">Зам. по воспит. работе</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                            
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Швороб Инна<br> Константиновна
+                                </h1>
+                                <h2 class="worker__work">Руководитель музея</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                            
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Левонович Анна<br> Владимировна
+                                </h1>
+                                <h2 class="worker__work">Музыкально сопровождение</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                            
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Дорош Яна<br>1 состав
+                                </h1>
+                                <h2 class="worker__work">Экскурсовод</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                            
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Малашук Дарья<br>1 состав
+                                </h1>
+                                <h2 class="worker__work">Экскурсовод</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                            
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Заяц Анастасия<br>1 состав
+                                </h1>
+                                <h2 class="worker__work">Экскурсовод</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Рогова Полина<br>1 состав
+                                </h1>
+                                <h2 class="worker__work">Экскурсовод</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Шульган Елизавета<br>1 состав
+                                </h1>
+                                <h2 class="worker__work">Экскурсовод</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                            
+                        <div class="swiper-slide">
+                            <div class="worker__info">
+                                <h1 class="worker__name">
+                                    Гапанович Павел<br>2 состав
+                                </h1>
+                                <h2 class="worker__work">Экскурсовод</h2>
+                            </div>
+                            <img src="images/workers/worker-1.jpg" alt="" class="worker__photo">
+                        </div>
+                            
+                    </div>
+                    <div class="workers__button-next"></div>
+                </div> <!-- /.workers__inner -->
+                    
+                <!-- If we need pagination -->
+                <div class="workers__dots"></div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Exp -->
+        <div class="exposition" id="exposition">
+            <div class="container">
+                <div class="exposition__inner">
+                    <h1 class="exposition__title">Экспозиция</h1>
+                    <div class="exposition__item">
+                        <div class="exposition__item--inner">
+                            <div class="exposition__item--title">1 часть</div>
+                            <div class="exposition__item--photo">
+                                <img src="images/exposition/muzey-boevoy-slavy-06.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exposition__item">
+                        <div class="exposition__item--inner">
+                            <div class="exposition__item--title">2 часть</div>
+                            <div class="exposition__item--photo">
+                                <img src="images/exposition/muzey-boevoy-slavy-06.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exposition__item">
+                        <div class="exposition__item--inner">
+                            <div class="exposition__item--title">3 часть</div>
+                            <div class="exposition__item--photo">
+                                <img src="images/exposition/muzey-boevoy-slavy-06.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exposition__item">
+                        <div class="exposition__item--inner">
+                            <div class="exposition__item--title">4 часть</div>
+                            <div class="exposition__item--photo">
+                                <img src="images/exposition/muzey-boevoy-slavy-06.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exposition__item">
+                        <div class="exposition__item--inner">
+                            <div class="exposition__item--title">5 часть</div>
+                            <div class="exposition__item--photo">
+                                <img src="images/exposition/muzey-boevoy-slavy-06.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exposition__item">
+                        <div class="exposition__item--inner">
+                            <div class="exposition__item--title">6 часть</div>
+                            <div class="exposition__item--photo">
+                                <img src="images/exposition/muzey-boevoy-slavy-06.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- chronicle -->
+        <div class="chronicle" id="chronicle">
+            <div class="container">
+                <h1 class="chronicle__title">Хроника</h1>
+                <div class="chronicle__slider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="chronicle__item">
+                                <div class="chronicle__item--photo">
+                                    <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                                </div>
+                                <h1 class="chronicle__item--name">Фамилия Имя Отчество</h1>
+                                <h2 class="chronicle__item--date">Дата - ...</h2>
+                                <div class="chronicle__item--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chronicle__item">
+                                <div class="chronicle__item--photo">
+                                    <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                                </div>
+                                <h1 class="chronicle__item--name">Фамилия Имя Отчество</h1>
+                                <h2 class="chronicle__item--date">Дата - ...</h2>
+                                <div class="chronicle__item--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chronicle__item">
+                                <div class="chronicle__item--photo">
+                                    <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                                </div>
+                                <h1 class="chronicle__item--name">Фамилия Имя Отчество</h1>
+                                <h2 class="chronicle__item--date">Дата - ...</h2>
+                                <div class="chronicle__item--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chronicle__item">
+                                <div class="chronicle__item--photo">
+                                    <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                                </div>
+                                <h1 class="chronicle__item--name">Фамилия Имя Отчество</h1>
+                                <h2 class="chronicle__item--date">Дата - ...</h2>
+                                <div class="chronicle__item--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="chronicle__item">
+                                <div class="chronicle__item--photo">
+                                    <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                                </div>
+                                <h1 class="chronicle__item--name">Фамилия Имя Отчество</h1>
+                                <h2 class="chronicle__item--date">Дата - ...</h2>
+                                <div class="chronicle__item--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chronicle more -->
+            <div class="chronicle__blocks">
+                <div class="container">
+                    <div class="chronicle__block--hidden">
+                        <div class="chronicle__block--inner">
+                            <button class="chronicle__block--cross"></button>
+                            <div class="chronicle__block--photo">
+                                <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                            </div>
+                            <div class="chronicle__block--textbox">
+                                <div class="chronicle__block--name">Фамилия Имя Отчество</div>
+                                <div class="chronicle__block--info">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium reprehenderit ea dignissimos nobis at debitis pariatur magni, dolore sunt asperiores commodi. Hic assumenda expedita eligendi aut, soluta nihil, velit minus earum ad, tempore labore. Autem, quas, natus delectus cum pariatur, consectetur commodi quis aut odio debitis minus? Deserunt doloribus itaque perferendis reiciendis delectus velit obcaecati at, possimus, nemo accusantium, ducimus nesciunt. Reiciendis harum ipsam error, repudiandae ex facere labore amet molestiae dignissimos mollitia facilis beatae vero? Similique, ratione? Illum ipsum dolorum voluptate ad ipsa tempora reprehenderit quos quidem nostrum quibusdam sint error repudiandae inventore quisquam sit asperiores eius laudantium tenetur, soluta eligendi quasi nulla. Est quasi ullam corrupti odit doloribus perferendis, nulla, doloremque laboriosam in quod dolorem similique. Temporibus est sunt, cupiditate dolor commodi ut quis tempore! Quae, atque. Qui, facilis nihil! Dolore ab at labore incidunt hic debitis quae vitae totam eligendi eius mollitia quaerat, doloremque dolorem praesentium eos, voluptatibus esse corrupti quia! Perferendis, aliquam. Id alias beatae, minus cupiditate aliquam explicabo, nostrum delectus perspiciatis, magnam enim reiciendis non commodi optio quaerat quod sequi aspernatur debitis consequuntur mollitia neque eum animi. Odit adipisci quaerat labore commodi culpa? Voluptas earum mollitia fuga possimus excepturi nam. Quisquam hic porro libero quam!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chronicle__blocks">
+                <div class="container">
+                    <div class="chronicle__block--hidden">
+                        <div class="chronicle__block--inner">
+                            <button class="chronicle__block--cross"></button>
+                            <div class="chronicle__block--photo">
+                                <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                            </div>
+                            <div class="chronicle__block--textbox">
+                                <div class="chronicle__block--name">Фамилия Имя Отчество</div>
+                                <div class="chronicle__block--info">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium reprehenderit ea dignissimos nobis at debitis pariatur magni, dolore sunt asperiores commodi. Hic assumenda expedita eligendi aut, soluta nihil, velit minus earum ad, tempore labore. Autem, quas, natus delectus cum pariatur, consectetur commodi quis aut odio debitis minus? Deserunt doloribus itaque perferendis reiciendis delectus velit obcaecati at, possimus, nemo accusantium, ducimus nesciunt. Reiciendis harum ipsam error, repudiandae ex facere labore amet molestiae dignissimos mollitia facilis beatae vero? Similique, ratione? Illum ipsum dolorum voluptate ad ipsa tempora reprehenderit quos quidem nostrum quibusdam sint error repudiandae inventore quisquam sit asperiores eius laudantium tenetur, soluta eligendi quasi nulla. Est quasi ullam corrupti odit doloribus perferendis, nulla, doloremque laboriosam in quod dolorem similique. Temporibus est sunt, cupiditate dolor commodi ut quis tempore! Quae, atque. Qui, facilis nihil! Dolore ab at labore incidunt hic debitis quae vitae totam eligendi eius mollitia quaerat, doloremque dolorem praesentium eos, voluptatibus esse corrupti quia! Perferendis, aliquam. Id alias beatae, minus cupiditate aliquam explicabo, nostrum delectus perspiciatis, magnam enim reiciendis non commodi optio quaerat quod sequi aspernatur debitis consequuntur mollitia neque eum animi. Odit adipisci quaerat labore commodi culpa? Voluptas earum mollitia fuga possimus excepturi nam. Quisquam hic porro libero quam!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chronicle__blocks">
+                <div class="container">
+                    <div class="chronicle__block--hidden">
+                        <div class="chronicle__block--inner">
+                            <button class="chronicle__block--cross"></button>
+                            <div class="chronicle__block--photo">
+                                <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                            </div>
+                            <div class="chronicle__block--textbox">
+                                <div class="chronicle__block--name">Фамилия Имя Отчество</div>
+                                <div class="chronicle__block--info">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium reprehenderit ea dignissimos nobis at debitis pariatur magni, dolore sunt asperiores commodi. Hic assumenda expedita eligendi aut, soluta nihil, velit minus earum ad, tempore labore. Autem, quas, natus delectus cum pariatur, consectetur commodi quis aut odio debitis minus? Deserunt doloribus itaque perferendis reiciendis delectus velit obcaecati at, possimus, nemo accusantium, ducimus nesciunt. Reiciendis harum ipsam error, repudiandae ex facere labore amet molestiae dignissimos mollitia facilis beatae vero? Similique, ratione? Illum ipsum dolorum voluptate ad ipsa tempora reprehenderit quos quidem nostrum quibusdam sint error repudiandae inventore quisquam sit asperiores eius laudantium tenetur, soluta eligendi quasi nulla. Est quasi ullam corrupti odit doloribus perferendis, nulla, doloremque laboriosam in quod dolorem similique. Temporibus est sunt, cupiditate dolor commodi ut quis tempore! Quae, atque. Qui, facilis nihil! Dolore ab at labore incidunt hic debitis quae vitae totam eligendi eius mollitia quaerat, doloremque dolorem praesentium eos, voluptatibus esse corrupti quia! Perferendis, aliquam. Id alias beatae, minus cupiditate aliquam explicabo, nostrum delectus perspiciatis, magnam enim reiciendis non commodi optio quaerat quod sequi aspernatur debitis consequuntur mollitia neque eum animi. Odit adipisci quaerat labore commodi culpa? Voluptas earum mollitia fuga possimus excepturi nam. Quisquam hic porro libero quam!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chronicle__blocks">
+                <div class="container">
+                    <div class="chronicle__block--hidden">
+                        <div class="chronicle__block--inner">
+                            <button class="chronicle__block--cross"></button>
+                            <div class="chronicle__block--photo">
+                                <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                            </div>
+                            <div class="chronicle__block--textbox">
+                                <div class="chronicle__block--name">Фамилия Имя Отчество</div>
+                                <div class="chronicle__block--info">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium reprehenderit ea dignissimos nobis at debitis pariatur magni, dolore sunt asperiores commodi. Hic assumenda expedita eligendi aut, soluta nihil, velit minus earum ad, tempore labore. Autem, quas, natus delectus cum pariatur, consectetur commodi quis aut odio debitis minus? Deserunt doloribus itaque perferendis reiciendis delectus velit obcaecati at, possimus, nemo accusantium, ducimus nesciunt. Reiciendis harum ipsam error, repudiandae ex facere labore amet molestiae dignissimos mollitia facilis beatae vero? Similique, ratione? Illum ipsum dolorum voluptate ad ipsa tempora reprehenderit quos quidem nostrum quibusdam sint error repudiandae inventore quisquam sit asperiores eius
+                                    </p>
+                                    <p>
+                                        laudantium tenetur, soluta eligendi quasi nulla. Est quasi ullam corrupti odit doloribus perferendis, nulla, doloremque laboriosam in quod dolorem similique. Temporibus est sunt, cupiditate dolor commodi ut quis tempore! Quae, atque. Qui, facilis nihil! Dolore ab at labore incidunt hic debitis quae vitae totam eligendi eius mollitia quaerat, doloremque dolorem praesentium eos, voluptatibus esse corrupti quia! Perferendis, aliquam. Id alias beatae, minus cupiditate aliquam explicabo, nostrum delectus perspiciatis, magnam enim reiciendis non commodi optio quaerat quod sequi aspernatur debitis consequuntur mollitia neque eum animi. Odit adipisci quaerat labore commodi culpa? Voluptas earum mollitia fuga possimus excepturi nam. Quisquam hic porro libero quam!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chronicle__blocks">
+                <div class="container">
+                    <div class="chronicle__block--hidden">
+                        <div class="chronicle__block--inner">
+                            <button class="chronicle__block--cross"></button>
+                            <div class="chronicle__block--photo">
+                                <img src="images/chronicle/ZWqFc4dZJ_E.jpg" alt="">
+                            </div>
+                            <div class="chronicle__block--textbox">
+                                <div class="chronicle__block--name">Фамилия Имя Отчество</div>
+                                <div class="chronicle__block--info">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium reprehenderit ea dignissimos nobis at debitis pariatur magni, dolore sunt asperiores commodi. Hic assumenda expedita eligendi aut, soluta nihil, velit minus earum ad, tempore labore. Autem, quas, natus delectus cum pariatur, consectetur commodi quis aut odio debitis minus? Deserunt doloribus itaque perferendis reiciendis delectus velit obcaecati at, possimus, nemo accusantium, ducimus nesciunt. Reiciendis harum ipsam error, repudiandae ex facere labore amet molestiae dignissimos mollitia facilis beatae vero? Similique, ratione? Illum ipsum dolorum voluptate ad ipsa tempora reprehenderit quos quidem nostrum quibusdam sint error repudiandae inventore quisquam sit asperiores eius laudantium tenetur, soluta eligendi quasi nulla. Est quasi ullam corrupti odit doloribus perferendis, nulla, doloremque laboriosam in quod dolorem similique. Temporibus est sunt, cupiditate dolor commodi ut quis tempore! Quae, atque. Qui, facilis nihil! Dolore ab at labore incidunt hic debitis quae vitae totam eligendi eius mollitia quaerat, doloremque dolorem praesentium eos, voluptatibus esse corrupti quia! Perferendis, aliquam. Id alias beatae, minus cupiditate aliquam explicabo, nostrum delectus perspiciatis, magnam enim reiciendis non commodi optio quaerat quod sequi aspernatur debitis consequuntur mollitia neque eum animi. Odit adipisci quaerat labore commodi culpa? Voluptas earum mollitia fuga possimus excepturi nam. Quisquam hic porro libero quam!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium reprehenderit ea dignissimos nobis at debitis pariatur magni, dolore sunt asperiores commodi. Hic assumenda expedita eligendi aut, soluta nihil, velit minus earum ad, tempore labore.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- news -->
+        <div class="news" id="news">
+            <div class="container">
+                <h1 class="news__title">Новости</h1>
+                <div class="news__inner">
+                    
+                    <div class="news__item">
+                        <a href="#" class="news__item__photo">
+                            <img src="images/news/newsklklkl.jpg" alt="" class="img">
+                        </a>
+                        <h1 class="news__item__title">Что-то произошло</h1>
+                        <div class="news__item__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi et in ab! Quisquam ad architecto error illum, recusandae molestias eveniet assumenda esse voluptatem necessitatibus voluptatibus ut quae ab perferendis dolores.</div>
+                        <a href="#" class="news__item__link">Подробнее</a>
+                    </div>
+                    
+                    <div class="news__item">
+                        <a href="#" class="news__item__photo">
+                            <img src="images/news/newsklklkl.jpg" alt="" class="img">
+                        </a>
+                        <h1 class="news__item__title">Что-то произошло</h1>
+                        <div class="news__item__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi et in ab! Quisquam ad architecto error illum, recusandae molestias eveniet assumenda esse voluptatem necessitatibus voluptatibus ut quae ab perferendis dolores.</div>
+                        <a href="#" class="news__item__link">Подробнее</a>
+                    </div>
+                    
+                    <div class="news__item">
+                        <a href="#" class="news__item__photo">
+                            <img src="images/news/newsklklkl.jpg" alt="" class="img">
+                        </a>
+                        <h1 class="news__item__title">Что-то произошло</h1>
+                        <div class="news__item__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi et in ab! Quisquam ad architecto error illum, recusandae molestias eveniet assumenda esse voluptatem necessitatibus voluptatibus ut quae ab perferendis dolores.</div>
+                        <a href="#" class="news__item__link">Подробнее</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!--order-->
+        <div class="order" id="order">
+            <div class="container">
+                <h1 class="order__title">Заказать экскурсию</h1>
+                <div class="order__inner">
+                    <div class="order__content">
+                        
+                        <div class="order__elex">
+                            <h4 class="order__elex__title">Виртуальная экскурсия:</h4>
+                            <p class="order__elex__content">Если вам понравилось, вы взглянуть на<br>нашу виртуальную экскурсию</p>
+                            <i class="fas fa-globe"></i><br>
+                            <button class="order__elex__btn">Посмотреть</button>
+                            <h4 class="order__elex__content" style="padding: 2em 1em 0 0">Наши данные:</h4>
+                            
+                        </div>
+                        
+                        <div class="order__tel">Тел. <a class="aa">+375 33 333 33 33</a></div>
+                        
+                        <div class="order__time">Пн - Пт С 9:00 до 12:00</div>
+                        
+                        <div class="order__messengers">
+                            <a href="" target="_blank" style="color: #597da3;"><i class="fab fa-vk"></i></a>
+                            <a href="" target="_blank" style="color: #59267c;"><i class="fab fa-viber"></i></a>
+                            <a href="" target="_blank" style="color:  #0088cc;"><i class="fab fa-telegram"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    
+                    <div class="footer__item">
+                        <div class="footer__text">Музей на базе ГУО Средняя школа № 13
+                        г.Бреста им. В. И. Хована <br>email: <a class="aa" target="_blank" href="https://13brest.schools.by/">schoo13brest@brest.by</a></div>
+                    </div>
+            
+                        <div class="footer__item">
+                            <div class="item__inner">
+                                <a href="#" class="footer__link">Главная</a>
+                                <a href="#info" class="footer__link">О нас</a>
+                                <a href="#order" class="footer__link">Онлайн экскурсия</a>
+                                <a href="#workers" class="footer__link">Работники</a>
+                                <a href="#exposition" class="footer__link">Экспозиции</a>
+                                <a href="#chronicle" class="footer__link">Хроника</a>
+                                <a href="#news"class="footer__link">Новости</a>
+                                <a class="footer__link">FAQ</a> 
+                            </div>
+                        </div>
+                        <br>
+                        <div class="footer__item">
+                            <div class="footer__text">Контакты:<br>Тел.<a href="tel: +375 33 333 33 33" class="aa">+375 33 333 33 33</a> <br>email: <a class="aa" target="_blank" href="https://13brest.schools.by/">schoo13brest@brest.by</a></div>
+                            
+                            <div class="mas__icons" >
+                                <a href="" target="_blank" style="color: #597da3"><i class="fab fa-vk"></i></a>
+                                <a href="" target="_blank" style="color: #59267c"><i class="fab fa-viber"></i></a>
+                                <a href="" target="_blank" style="color:  #0088cc"><i class="fab fa-telegram"></i></a>
+                            </div>
+                        </div>
+                    
+                        
+                </div>
+            </div>
+        </footer>
+        
+        
+    <!---->
+
+    </div> <!-- ./page -->
+    
+    <div class="nav__mask" id="close-nav">
+        <div class="nav__inner">
+            <button class="nav__close" id="close-nav"></button>
+            <h1 class="nav__title">Навигация</h1>
+            <nav class="nav" style="color: #fff;">
+                <a href="#info" class="nav__link"><i style="text-align: center; font-size: 1em; padding: 0 .2em" class="fas fa-info-circle"></i>Информация</a>
+                <a href="#person" class="nav__link"><i style="text-align: center; font-size: 1em; padding:0 .5em " class="fas fa-male"></i>Хован В.И.</a>
+                <a href="#workers" class="nav__link"><i style="text-align: center; font-size: 1em; padding: 0 .2em" class="fas fa-user-friends"></i>Представители</a>
+                <a href="#exposition" class="nav__link"><i style="text-align: center; font-size: 1em; padding: 0 .3em" class="far fa-images"></i>Экспозиция</a>
+                <a href="#chronicle" class="nav__link"><i style="text-align: center; font-size: 1em; padding: 0 .4em" class="far fa-address-book"></i>Хроника</a>
+                <a href="#news" class="nav__link"><i style="text-align: center; font-size: 1em; padding: 0 .4em" class="fas fa-newspaper"></i>Новости</a>
+                <a href="#order" class="nav__link"><i style="text-align: center; font-size: 1em; padding: 0 .4em" class="fas fa-phone-alt"></i>Заказать экскурсию</a>
+            </nav>
+        </div>
+    </div>
+    
+    
+    <!-- modals -->
+    <div class="modal" id="close-modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" id="close-modal">
+                
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div class="modal__swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="modal__swiper-pagination"></div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <div class="modal__swiper-button-prev"></div>
+                        <div class="modal__swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Title 1</h3>
+                    </div>
+
+                    
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button" id="modal-work__prev">
+                            <img src="images/back.svg" height="11" alt="">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn" type="button" id="modal-work__next">
+                            Next
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+                
+            </div><!--/.modal-work -->
+
+            
+            
+            <!-- ============== -->
+            
+            
+            
+            
+            
+            
+            
+            <!-- ============== -->
+            
+            
+            
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+    <!-- modals -->
+    
+    <div class="modal active" id="close-modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" id="close-modal">
+                
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div class="modal__swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="modal__swiper-pagination"></div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <div class="modal__swiper-button-prev"></div>
+                        <div class="modal__swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Title 2</h3>
+                    </div>
+
+                    
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button" id="modal-work__prev">
+                            <img src="images/back.svg" height="11" alt="">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn" type="button" id="modal-work__next">
+                            Next
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+            </div><!--/.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+    <!-- modals -->
+    <div class="modal" id="close-modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" id="close-modal">
+                
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div class="modal__swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="modal__swiper-pagination"></div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <div class="modal__swiper-button-prev"></div>
+                        <div class="modal__swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Title 3</h3>
+                    </div>
+
+                    
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button" id="modal-work__prev">
+                            <img src="images/back.svg" height="11" alt="">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn" type="button" id="modal-work__next">
+                            Next
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+            </div><!--/.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+    
+    <!-- modals -->
+    <div class="modal" id="close-modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" id="close-modal">
+                
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div class="modal__swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="modal__swiper-pagination"></div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <div class="modal__swiper-button-prev"></div>
+                        <div class="modal__swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Title 4</h3>
+                    </div>
+
+                    
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button" id="modal-work__prev">
+                            <img src="images/back.svg" height="11" alt="">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn" type="button" id="modal-work__next">
+                            Next
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+            </div><!--/.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+    
+    <!-- modals -->
+    <div class="modal" id="close-modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" id="close-modal">
+                
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div class="modal__swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="modal__swiper-pagination"></div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <div class="modal__swiper-button-prev"></div>
+                        <div class="modal__swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Title 5</h3>
+                    </div>
+
+                    
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button" id="modal-work__prev">
+                            <img src="images/back.svg" height="11" alt="">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn" type="button" id="modal-work__next">
+                            Next
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+            </div><!--/.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+    
+    <!-- modals -->
+    <div class="modal" id="close-modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" id="close-modal">
+                
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div class="modal__swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/exposition-modals/exp-modal-01-04.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="modal__swiper-pagination"></div>
+                        
+                        <!-- If we need navigation buttons -->
+                        <div class="modal__swiper-button-prev"></div>
+                        <div class="modal__swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Title 6</h3>
+                    </div>
+
+                    
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn" type="button" id="modal-work__prev">
+                            <img src="images/back.svg" height="11" alt="">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn" type="button" id="modal-work__next">
+                            Next
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+            </div><!--/.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+    
+    
+    <!-- scripts -->
+    <script src="https://kit.fontawesome.com/141e79df40.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
