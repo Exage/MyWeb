@@ -46,7 +46,7 @@ function checkScrollPos() {
         introBgImages.style.transform = `translateY(${intro.clientHeight * 0.25}px)`
         bulb.classList.add('active')
         
-        logo.setAttribute('style', `opacity: 1; transform: translateY(0);`)
+        // logo.setAttribute('style', `opacity: 1; transform: translateY(0);`)
     } else {
         header.classList.remove('fixed')
         introMask.setAttribute('style', `background: linear-gradient(0deg, rgba(16,16,16,1) 5%, rgba(16,16,16,${(scrollPos / 1000) * 1.2}) 115%);`)  
@@ -328,3 +328,49 @@ personMoreBtn.addEventListener('click', () => {
         personInfoMoreInner.classList.add('active')
     }
 })
+
+/* ??? */
+
+window.addEventListener('keydown', Event => {
+    if (Event.key === ']' || Event.key === 'ъ') {
+        if (Event.ctrlKey) {
+            let secret = prompt('Введи код') 
+            console.log(secret)
+            if (secret !== null) {
+                if (secret === '240205__210405') {
+                    window.open('https://www.youtube.com/watch?v=YX5UdrBozms&ab_channel=BRUTTONOSTRA')
+                } else if (secret === 'Полина Рогова' || secret === 'Рогова Полина') {
+                    alert('Крашиха')
+                } else {
+                    alert('Такого не знаем... ¯\_(ツ)_/¯')
+                }
+            }
+        }
+    }
+    
+    if (Event.code === 'KeyA') {
+        console.log('tps://www.y [2]')
+    }
+    if (Event.code === 'KeyR') {
+        console.log('ht [1]')
+    }
+    if (Event.code === 'Slash') {
+        console.log('outube.c [3]')
+    }
+    if (Event.code === 'Comma') {
+        console.log('om/watch? [4]')
+    }
+    if (Event.code === 'KeyZ') {
+        console.log('v=dQ [5]')
+    }
+    if (Event.code === 'KeyX') {
+        console.log('w4w [6]')
+    }
+    if (Event.code === 'KeyG') {
+        console.log('9WgX [7]')
+    }
+    if (Event.code === 'KeyC') {
+        console.log('cQ [8]')
+    }
+})
+
