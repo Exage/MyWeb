@@ -15,6 +15,9 @@
     --intro-btn-color: #333;
 
     --bulb-color: #555;
+    
+    --primaryFAQ: #c7c7c7;
+    --secondaryFAQ: #d9d9d9;
 }
 
 .exposition__item:hover .exposition__item--inner{

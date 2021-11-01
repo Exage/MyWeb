@@ -11,6 +11,8 @@
 
     --bulb-color: #121212;
     --swiper-pagination-color: #fff;
+    --primaryFAQ: #303030;
+    --secondaryFAQ: #3d3d3d;
 }
 
 .exposition__item:hover .exposition__item--inner{
