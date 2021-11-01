@@ -81,10 +81,7 @@ const x = setInterval(() => {
     introBg.forEach(item => item.classList.remove('startAnim'))
     introBg[i].classList.add('startAnim')
     i++
-
-    if (i === introBg.length) {
-        i = 0
-    }
+    if (i === introBg.length) i = 0
 }, 3500)
 
 /* Toggle Navigation */
@@ -236,12 +233,7 @@ function smoothScroll(item) {
         Event.preventDefault()
 
         const target = document.querySelector(item.getAttribute('href'))
-        
         const targetTop = target.getBoundingClientRect().top
-
-        if (window.innerWidth < 1000 -17) {
-            toggleNav()
-        }
 
         window.scrollBy({
             top: targetTop - headerHeight,

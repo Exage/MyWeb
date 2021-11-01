@@ -9,6 +9,10 @@ body {
     transition: font-size .5s ease;
 }
 
+body.nav__active {
+    /* overflow: hidden; */
+}
+
 :root {
     --header-height: 4em;
     --swiper-pagination-bullet-size: .75em;
@@ -1572,6 +1576,16 @@ button {
     
 }
 
+.order__content__img {
+    align-content: center;
+}
+
+.content__img {
+    margin: 0 auto;
+    height: 15em;
+    border-radius: .5em;
+}
+
 .order__elex {
     padding: .8em 0 0;
     text-align: center;
@@ -1609,11 +1623,6 @@ button {
 .order__elex__btn:hover{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.35);
-}
-
-.order__time {
-    text-align: center;
-    padding: .2em 0 0;
 }
 
 .fas  {
@@ -1665,6 +1674,10 @@ button {
 .footer__link {
     color: var(--red);
     text-decoration: none;
+}
+
+.footer__time {
+    padding: .2em 0;
 }
 
 .aa {
@@ -1796,7 +1809,7 @@ button {
 }
 
 .modal-work__title {
-    font-size: 2.12rem;
+    font-size: 1.8em;
     color: var(--text);
     font-weight: 700;
     text-transform: uppercase;

@@ -1,6 +1,30 @@
 const body = document.querySelector('body')
 const page = document.querySelector('.page')
 
+/* Show controls */
+
+let isControlsOpen = false
+
+document.querySelector('.vision__controls--button').addEventListener('click', function() {
+    if (isControlsOpen) {
+        document.querySelector('.vision__controls').style.height = `0px`
+        isControlsOpen = false
+
+        this.classList.remove('rot')
+    } else {
+        document.querySelector('.vision__controls').style.height = `${document.querySelector('.vision__controls--inner').clientHeight}px`
+        isControlsOpen = true
+
+        this.classList.add('rot')
+    }
+})
+
+/* Open Nav */
+
+document.querySelector('.open__nav').addEventListener('click', () => {
+    document.querySelector('.nav').classList.toggle('active')
+})
+
 /* Img Grayscale */
 
 document.querySelector('#img-gray').addEventListener('click', function() {
@@ -57,7 +81,7 @@ document.querySelector('#lh-minus').addEventListener('click', function() {
 
 /* Smooth Scroll */
 
-const pageTopHeight = document.querySelector('.page__top').clientHeight + 25
+const pageTopHeight = document.querySelector('.page__top').clientHeight
 
 document.querySelectorAll('.nav__link').forEach(item => {
     item.addEventListener('click', Event => {
@@ -67,7 +91,7 @@ document.querySelectorAll('.nav__link').forEach(item => {
         let targetTop = target.getBoundingClientRect().top
 
         window.scrollBy({
-            top: targetTop - pageTopHeight,
+            top: targetTop - (pageTopHeight + 25),
             behavior: 'smooth'
         })
     })
@@ -124,8 +148,6 @@ modal.forEach((item, itemPos) => {
 
 const expositionItem = document.querySelectorAll('.exposition__item')
 const header = document.querySelector('.header')
-
-console.log(expositionItem)
 
 expositionItem.forEach((item, itemPos) => {
     item.addEventListener('click', () => {
