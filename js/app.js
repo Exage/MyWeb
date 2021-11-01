@@ -201,6 +201,7 @@ const swiper2 = new Swiper('.chronicle__slider', {
 const swiperM = new Swiper('.modal__swiper', {
     spaceBetween: 30,
     slidesPerView: 1,
+    autoHeight: true,
 
     pagination: {
         el: '.modal__swiper-pagination',
@@ -211,6 +212,12 @@ const swiperM = new Swiper('.modal__swiper', {
         nextEl: '.modal__swiper-button-next',
         prevEl: '.modal__swiper-button-prev',
     },
+
+    breakpoints: {
+        1060: {
+            autoHeight: false
+        }
+    }
 })
 
 /* Smooth Scroll */
