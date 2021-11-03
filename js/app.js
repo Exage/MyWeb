@@ -184,8 +184,8 @@ const swiper2 = new Swiper('.chronicle__slider', {
     },
 
     navigation: {
-        // nextEl: '.workers__button-next',
-        // prevEl: '.workers__button-prev',
+        nextEl: '.chronicle__button-next',
+        prevEl: '.chronicle__button-prev',
     },
 
     breakpoints: {
