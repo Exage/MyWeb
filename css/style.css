@@ -599,10 +599,10 @@ button {
 
 @media (max-width: 983px) {
     .intro {
-        height: calc(90vh - var(--header-height));
+        height: calc(85vh - var(--header-height));
     }
     .header {
-        top: calc(90vh - var(--header-height));
+        top: calc(85vh - var(--header-height));
     }
 }
 
@@ -1455,7 +1455,7 @@ button {
 }
 
 .chronicle__block--info {
-    font-size: 21px;
+    font-size: 1.3em;
     line-height: 1.2;
     text-align: justify;
     color: var(--text);
@@ -1669,17 +1669,43 @@ button {
 
 .footer__inner {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__inner__logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__logo {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: flex-end;
+
+    padding-top: 30px;
+}
+
+.footer__logo--img {
+    fill: var(--text);
+    margin-bottom: 3px;
+    margin-right: 10px;
+}
+
+.footer__logo--title {
+    font-weight: 700;
 }
 
 .footer__item {
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 3em 1em;
-}
 
-.footer__item::nth-child(2) {
-    align-items: center;
+    padding: 30px 0;
+
+    justify-content: flex-start;
 }
 
 .footer__itemOne {
@@ -1696,11 +1722,21 @@ button {
 .footer__text {
     font-size: 1em;
     color: var(--text);
+    margin-top: 25px;
+}
+
+.footer__text:first-child {
+    margin-top: 0;
 }
 
 .footer__link {
     color: var(--red);
     text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer__link:last-child {
+    margin-bottom: 0;
 }
 
 .footer__time {
@@ -1714,6 +1750,19 @@ button {
 .fab {
     font-size: 2.4em;
     padding: .2em .1em;
+}
+
+
+@media (max-width: 1130px) {
+    .footer__item {
+        max-width: 200px;
+        width: 100%;
+
+        margin: 0 auto;
+    }
+    .item__inner {
+        margin: 0;
+    }
 }
 
 /* ==== Modals ==== */
@@ -2174,29 +2223,5 @@ button {
     
     .order__elex__btn {
         font-size: .8em;
-    }
-}
-
-
-@media (max-width: 590px) {
-    .footer__item {
-        font-size: .8em;
-        padding: 1em .2em;
-    }
-    
-    .footer__item:nth-child(1) {
-        display: none;
-    }
-    
-    .footer__item:nth-child(3) {
-        display: none;
-    }
-    
-    .footer__link {
-        line-height: 1.5em;
-    }
-    
-    .footer__text {
-        line-height: 1.7em;
     }
 }

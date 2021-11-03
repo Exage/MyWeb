@@ -624,6 +624,7 @@ button {
 
 .news__item--title {
     margin-bottom: 10px;
+    height: 90px;
 }
 
 .news__item--date {
