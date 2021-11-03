@@ -90,6 +90,9 @@ document.querySelectorAll('.nav__link').forEach(item => {
         let target = document.querySelector(item.getAttribute('href'))
         let targetTop = target.getBoundingClientRect().top
 
+        clearModals()
+        body.style.overflow = 'auto'
+
         window.scrollBy({
             top: targetTop - (pageTopHeight + 25),
             behavior: 'smooth'
@@ -123,40 +126,56 @@ const swiperM = new Swiper('.modal__swiper', {
 
 const modal = document.querySelectorAll('.modal')
 
+let modalCounter = 0
+
 modal.forEach((item, itemPos) => {
     item.addEventListener('click', Event => {
         if (Event.target.id === 'close-modal') {
             item.classList.remove('active')
             body.style.overflow = 'auto'
-            header.style.display = 'block'
         }
 
         if (Event.target.id === 'modal-work__next') {
-            if (itemPos < modal.length - 1) {
-                modal[itemPos + 1].classList.add('active')
-                item.classList.remove('active')
+            clearModals()
+            if (modalCounter === modal.length - 1) {
+                modalCounter = 0
+            } else {
+                modalCounter++
             }
+            modal[modalCounter].classList.add('active')
         }
         if (Event.target.id === 'modal-work__prev') {
-            if (itemPos > 0) {
-                modal[itemPos - 1].classList.add('active')
-                item.classList.remove('active')
+            clearModals()
+            if (modalCounter === 0) {
+                modalCounter = modal.length - 1
+            } else {
+                modalCounter--
             }
+            modal[modalCounter].classList.add('active')
         }
     })
 })
 
+function clearModals() {
+    modal.forEach(item => item.classList.remove('active'))
+}
+
+/* Call Modal By Exposition */
+
 const expositionItem = document.querySelectorAll('.exposition__item')
-const header = document.querySelector('.header')
 
 expositionItem.forEach((item, itemPos) => {
     item.addEventListener('click', () => {
         if (!(modal[itemPos] === undefined)) {
-            modal[itemPos].classList.add('active')
             body.style.overflow = 'hidden'
-            header.style.display = 'none'
+            modalCounter = itemPos
+            modal[modalCounter].classList.add('active')
         } else {
             alert('Модального окна нет, Швороб добавь окно')
         }
     })
+})
+
+modal.forEach(item => {
+    item.setAttribute('style', `height: ${document.documentElement.clientHeight - pageTopHeight}px`) 
 })
