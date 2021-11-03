@@ -281,6 +281,8 @@ function chronicHide() {
 
 const modal = document.querySelectorAll('.modal')
 
+let modalCounter = 0
+
 modal.forEach((item, itemPos) => {
     item.addEventListener('click', Event => {
         if (Event.target.id === 'close-modal') {
@@ -289,19 +291,31 @@ modal.forEach((item, itemPos) => {
         }
 
         if (Event.target.id === 'modal-work__next') {
-            if (itemPos < modal.length - 1) {
-                modal[itemPos + 1].classList.add('active')
-                item.classList.remove('active')
+            clearModals()
+            if (modalCounter === modal.length - 1) {
+                modalCounter = 0
+            } else {
+                modalCounter++
             }
+            console.log(modalCounter)
+            modal[modalCounter].classList.add('active')
         }
         if (Event.target.id === 'modal-work__prev') {
-            if (itemPos > 0) {
-                modal[itemPos - 1].classList.add('active')
-                item.classList.remove('active')
+            clearModals()
+            if (modalCounter === 0) {
+                modalCounter = modal.length - 1
+            } else {
+                modalCounter--
             }
+            console.log(modalCounter)
+            modal[modalCounter].classList.add('active')
         }
     })
 })
+
+function clearModals() {
+    modal.forEach(item => item.classList.remove('active'))
+}
 
 /* Call Modal By Exposition */
 
@@ -310,8 +324,8 @@ const expositionItem = document.querySelectorAll('.exposition__item')
 expositionItem.forEach((item, itemPos) => {
     item.addEventListener('click', () => {
         if (!(modal[itemPos] === undefined)) {
-            modal[itemPos].classList.add('active')
-            body.style.overflow = 'hidden'
+            modalCounter = itemPos
+            modal[modalCounter].classList.add('active')
         } else {
             alert('Модального окна нет, Швороб добавь окно')
         }
