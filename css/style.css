@@ -1329,6 +1329,59 @@ button {
     margin-bottom: 40px;
 
     overflow: hidden;
+
+    position: relative;
+}
+
+.chronicle__slider:hover .chronicle__button-prev, .chronicle__slider:hover .chronicle__button-next {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.chronicle__button-next,
+.chronicle__button-prev {
+    position: absolute;
+    top: calc(50% - 15px);
+
+    width: 32px;
+    height: 32px;
+
+    background-color: var(--sec-primary);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+
+    z-index: 100;
+
+    transition-property: opacity, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+}
+
+.chronicle__button-prev {
+    left: 0;
+    background-image: url(../images/slider-arrow/left-arrow.svg);
+    transform: translateX(-10px);
+}
+
+.chronicle__button-next {
+    right: 0;
+    background-image: url(../images/slider-arrow/right-arrow.svg);
+    transform: translateX(10px);
+}
+
+@media (max-width: 1160px) {
+    .chronicle__button-next,
+    .chronicle__button-prev {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .chronicle__slider .swiper-slide {
