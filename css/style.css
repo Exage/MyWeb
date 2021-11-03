@@ -9,10 +9,6 @@ body {
     transition: font-size .5s ease;
 }
 
-body.nav__active {
-    /* overflow: hidden; */
-}
-
 :root {
     --header-height: 4em;
     --swiper-pagination-bullet-size: .75em;
@@ -300,8 +296,21 @@ button {
     margin-right: auto;
 
     pointer-events: none;
+
+    cursor: default;
     
     z-index: 1;
+}
+
+.logo__img {
+    cursor: pointer;
+}
+.logo__img > path {
+    pointer-events: none;
+}
+
+.logo.canScroll {
+    pointer-events: all;
 }
 
 .logo__left,
@@ -586,6 +595,15 @@ button {
     position: relative;
     margin-bottom: var(--header-height);
     z-index: 1;
+}
+
+@media (max-width: 983px) {
+    .intro {
+        height: calc(90vh - var(--header-height));
+    }
+    .header {
+        top: calc(90vh - var(--header-height));
+    }
 }
 
 .intro__mask {
@@ -877,8 +895,8 @@ button {
 }
 
 .person__photo {
-    width: 17em;
-    height: 25em;
+    width: 272px;
+    height: 400px;
 
     margin: 0 auto;
 
@@ -953,22 +971,22 @@ button {
 /* Workers */
 
 .workers {
-    margin-top: 12.5em;
-    padding-bottom: 2em;
+    margin-top: 200px;
+    padding-bottom: 32px;
 }
 
 .workers__title {
     text-align: center;
-    margin-bottom: 2.5em;
+    margin-bottom: 40px;
 }
 
 .workers__inner {
     position: relative;
     
     width: 100%;
-    height: 30em;
+    height: 480px;
 
-    padding-bottom: 2em;
+    padding-bottom: 32px;
 }
 
 .workers__inner:hover .workers__button-next{
@@ -984,12 +1002,12 @@ button {
     width: 100%;
     height: 100%;
     
-    border-radius: .4em;
+    border-radius: 6px;
     overflow: hidden;
 }
 
 .workers__slider .swiper-slide {
-    border-radius: .8em;
+    border-radius: 13px;
     overflow: hidden;
     position: relative;
 
@@ -1025,7 +1043,7 @@ button {
 
     line-height: 1;
 
-    padding: 1em;
+    padding: 16px;
     
     cursor: default;
     
@@ -1041,7 +1059,7 @@ button {
 
 .worker__work {
     font-weight: 400;
-    margin-top: .2em;
+    margin-top: 3px;
     cursor: default;
     color: #fff;
 }
@@ -1049,7 +1067,7 @@ button {
 .workers__dots {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 32px;
 }
 
 .swiper-pagination-bullet {
@@ -1059,12 +1077,12 @@ button {
 .workers__about {
     display: flex;
     flex-direction: column;
-    padding-left: 2em;
-    padding-bottom: 2em;
+    padding-left: 32px;
+    padding-bottom: 32px;
 }
 
 .workers__text {
-    margin-top: 5em;
+    margin-top: 80px;
 }
 
 .workers__button-next,
@@ -1073,10 +1091,10 @@ button {
     top: 50%;
     transform: translateY(-50%);
 
-    width: 2em;
-    height: 2em;
+    width: 32px;
+    height: 32px;
     background-color: var(--sec-primary);
-    border-radius: 1em;
+    border-radius: 16px;
 
     background-position: center;
     background-size: 65%;
@@ -1159,7 +1177,7 @@ button {
     position: relative;
     color: var(--primary);
 
-    margin-top: 12.5em;
+    margin-top: 200px;
     
     width: 100%;
 
@@ -1181,18 +1199,18 @@ button {
 .exposition__inner {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1em; 
+    margin: 0 -16px; 
 
-    padding: 2em 0;
-    border-radius: 1em;
+    padding: 32px 0;
+    border-radius: 16px;
 }
 
 .exposition__item {
     width: 33.33333%;
-    height: 25em;
+    height: 400px;
 
-    margin-top: 3em;
-    padding: 0 1em;
+    margin-top: 48px;
+    padding: 0 16px;
     border-radius: .2em;
 
     cursor: pointer;
@@ -1201,7 +1219,7 @@ button {
 .exposition__item--inner {
     position: relative;
 
-    border-radius: .2em;
+    border-radius: .32px;
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
@@ -1228,9 +1246,7 @@ button {
     text-transform: uppercase;
     font-weight: 700;
 
-    border-radius: .2em;
-
-    margin-bottom: 1em;
+    border-radius: 3px;
 
     opacity: 0;
 
@@ -1242,11 +1258,19 @@ button {
     opacity: 1;
 }
 
+@media (max-width: 983px) {
+    .exposition__item--title {
+        opacity: 1;
+        height: 25%;
+        bottom: 0;
+    }
+}
+
 .exposition__item--photo {
     width: 100%;
-    height: 25em;
+    height: 400px;
     overflow: hidden;
-    border-radius: .2em;
+    border-radius: 3px;
     position: relative;
     box-shadow: 2px 2px 1px #f2e7c92f;
 }
@@ -1261,7 +1285,7 @@ button {
     height: 100%;
     object-fit: cover;
 
-    border-radius: .2em;
+    border-radius: 3px;
 }
 
 @media (max-width: 1320px) {
@@ -1287,20 +1311,22 @@ button {
 /* ==== chronicle ==== */
 
 .chronicle {
-    margin-top: 12.5em;
+    margin-top: 200px;
 }
 
 .chronicle__title {
     cursor: default;
     text-align: center;
-    margin-bottom: 2.5em;
+    margin-bottom: 40px;
     color: var(--text);
     cursor: default;
 }
 
 .chronicle__slider {
     width: 100%;
-    height: 25em;
+    height: 432px;
+
+    margin-bottom: 40px;
 
     overflow: hidden;
 }
@@ -1308,32 +1334,31 @@ button {
 .chronicle__slider .swiper-slide {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .chronicle__item {
     display: flex;
     flex-direction: column;
 
-    width: 18em;
+    width: 288px;
 
     color: var(--primary);
     background-color: var(--secondary);
 
-    padding: .4em .8em;
-    padding-top: 14.8em;
+    padding: 6px 13px;
+    padding-top: 235px;
 
     position: relative;
     cursor: pointer;
     
-    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.25);
-    border-radius: .4em;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
     overflow: hidden;
 }
 
 .chronicle__item--photo {
     width: 100%;
-    height: 14em;
+    height: 224px;
 
     position: absolute;
     top: 0;
@@ -1359,7 +1384,7 @@ button {
 
 .chronicle__item--text {
     text-align: justify;
-    font-size: 0.75em;
+    font-size: .85em;
     line-height: 1.5;
     margin-top: 1.25em;
     color: var(--text);
@@ -1369,7 +1394,7 @@ button {
     background-color: var(--secondary);
 
     overflow: hidden;
-    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
 
     transition-property: height;
     transition-duration: 500ms;
@@ -1383,19 +1408,19 @@ button {
 
 .chronicle__block--inner {
     display: flex;
-    padding: 0.625em;
-    padding-top: 2.625em;
+    padding: 10px;
+    padding-top: 42px;
 
     position: relative;
 }
 
 .chronicle__block--cross {
-    width: 1em;
-    height: 1em;
+    width: 16px;
+    height: 16px;
 
     position: absolute;
-    top: 1.2em;
-    left: 0.625em;
+    top: 15px;
+    left: 10px;
 
     opacity: .5;
     background-image: url(../images/icons/cross-dark.svg);
@@ -1404,8 +1429,8 @@ button {
 }
 
 .chronicle__block--photo {
-    width: 14.3em;
-    height: 18.25em;
+    width: 230px;
+    height: 292px;
     box-shadow: 0em 0em 1.25em rgba(0, 0, 0, 0.35);
 }
 
@@ -1417,12 +1442,12 @@ button {
 
 .chronicle__block--textbox {
     width: 100%;
-    padding-left: 1.5em;
+    padding-left: 24px;
     color: var(--primary);
 }
 
 .chronicle__block--name {
-    font-size: 2em;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.5;
     color: var(--text);
@@ -1430,14 +1455,14 @@ button {
 }
 
 .chronicle__block--info {
-    font-size: 1.3em;
+    font-size: 21px;
     line-height: 1.2;
     text-align: justify;
     color: var(--text);
 }
 
 .chronicle__block--info p {
-    margin-bottom: 1em;
+    margin-bottom: 16px;
 }
 .chronicle__block--info p:last-child {
     margin-bottom: 0;
@@ -1455,8 +1480,8 @@ button {
     }
     .chronicle__block--name {
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
 }
 
@@ -1570,19 +1595,16 @@ button {
 }
 
 .order__content {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     font-size: 1.3em;
     margin: 0 auto;
-    
-}
-
-.order__content__img {
-    align-content: center;
 }
 
 .content__img {
     margin: 0 auto;
-    height: 15em;
+    height: 240px;
     border-radius: .5em;
 }
 
@@ -1599,14 +1621,19 @@ button {
     text-align: center;
 }
 
-.order__tel {
+.order__text {
     text-align: center;
-    padding: .8em 0 0;
+    padding: .8em 0;
+}
+
+.order__email {
+    text-align: center;
+    padding: .4em 0 ;
 }
 
 .order__messengers {
     text-align: center;
-    padding: .4em 0 0;
+    padding: .4em 0 ;
     font-size: .7em;
 }
 
@@ -1648,7 +1675,7 @@ button {
     display: flex;
     flex-direction: column;
     width: 50%;
-        padding: 3em 1em;
+    padding: 3em 1em;
 }
 
 .footer__item::nth-child(2) {
