@@ -18,9 +18,12 @@ let headerHeight = header.clientHeight
 /* Change Theme */
 
 const changeTheme = document.querySelector('#change-theme')
+const changeFavTheme = document.querySelector('#change-favicon-theme')
+
 const bulb = document.querySelector('.header__bulb')
 
 changeTheme.setAttribute('href', `css/${localStorage.getItem('theme')}-theme.css`)
+changeFavTheme.setAttribute('href', `images/favicon-${localStorage.getItem('theme')}.svg`)
 
 if (localStorage.getItem('theme') === 'dark') {
     changeTheme.setAttribute('data-theme', 'light')
@@ -28,11 +31,16 @@ if (localStorage.getItem('theme') === 'dark') {
 
 bulb.addEventListener('click', () => {
     changeTheme.setAttribute('href', `css/${changeTheme.getAttribute('data-theme')}-theme.css`)
+
     if (changeTheme.getAttribute('data-theme') === 'dark') {
         changeTheme.setAttribute('data-theme', 'light')
+        changeFavTheme.setAttribute('href', `images/favicon-dark.svg`)
+
         localStorage.setItem('theme', 'dark')
     } else {
         changeTheme.setAttribute('data-theme', 'dark')
+        changeFavTheme.setAttribute('href', `images/favicon-light.svg`)
+
         localStorage.setItem('theme', 'light')
     }
 })
@@ -45,12 +53,12 @@ function checkScrollPos() {
         introMask.setAttribute('style', `background: linear-gradient(0deg, rgba(16,16,16,1) 5%, rgba(16,16,16,1) 115%);`)
         introBgImages.style.transform = `translateY(${intro.clientHeight * 0.25}px)`
         bulb.classList.add('active')
-        
-        // logo.setAttribute('style', `opacity: 1; transform: translateY(0);`)
+        logo.classList.add('canScroll')
     } else {
         header.classList.remove('fixed')
         introMask.setAttribute('style', `background: linear-gradient(0deg, rgba(16,16,16,1) 5%, rgba(16,16,16,${(scrollPos / 1000) * 1.2}) 115%);`)  
         introBgImages.style.transform = `translateY(${scrollPos * 0.25}px)`
+        logo.classList.remove('canScroll')
     }
 }
 
@@ -99,6 +107,7 @@ navMask.addEventListener('click', Event => {
 
 function toggleNav() {
     body.classList.toggle('nav__active')
+    chronicHide()
     if (window.innerWidth > 1000 - 17) {
         changeBlockSize()
     }
@@ -259,10 +268,6 @@ chronicleItem.forEach((item, itemPos) => {
     })
 })
 
-window.addEventListener('resize', () => {
-    chronicHide()
-})
-
 chronicleBlocksCross.forEach(item => {
     item.addEventListener('click', chronicHide)
 })
@@ -323,9 +328,20 @@ personMoreBtn.addEventListener('click', () => {
         personInfoMore.style.height = 0
         personInfoMoreInner.classList.remove('active')
     } else {
-        personInfoMore.style.height = `${personInfoMoreInner.clientHeight}px`
+        personInfoMore.style.height = `${personInfoMoreInner.clientHeight / 24}em`
         personInfoMoreInner.classList.add('active')
     }
+})
+
+/* To Top */
+
+const logoImg = document.querySelector('.logo__img')
+
+logoImg.addEventListener('click', Event => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
 })
 
 /* ??? */
