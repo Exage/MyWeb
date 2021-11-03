@@ -208,6 +208,7 @@ const swiperM = new Swiper('.modal__swiper', {
     spaceBetween: 30,
     slidesPerView: 1,
     autoHeight: true,
+    loop: true,
 
     pagination: {
         el: '.modal__swiper-pagination',
@@ -388,4 +389,5 @@ window.addEventListener('keydown', Event => {
         console.log('cQ [8]')
     }
 })
+
 
