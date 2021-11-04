@@ -297,7 +297,6 @@ modal.forEach((item, itemPos) => {
             } else {
                 modalCounter++
             }
-            console.log(modalCounter)
             modal[modalCounter].classList.add('active')
         }
         if (Event.target.id === 'modal-work__prev') {
@@ -307,7 +306,6 @@ modal.forEach((item, itemPos) => {
             } else {
                 modalCounter--
             }
-            console.log(modalCounter)
             modal[modalCounter].classList.add('active')
         }
     })
@@ -324,6 +322,7 @@ const expositionItem = document.querySelectorAll('.exposition__item')
 expositionItem.forEach((item, itemPos) => {
     item.addEventListener('click', () => {
         if (!(modal[itemPos] === undefined)) {
+            body.style.overflow = 'hidden'
             modalCounter = itemPos
             modal[modalCounter].classList.add('active')
         } else {
