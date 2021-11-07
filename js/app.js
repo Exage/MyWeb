@@ -1,3 +1,61 @@
+/* Change Theme */
+
+const changeTheme = document.querySelector('#change-theme')
+const changeFavTheme = document.querySelector('#change-favicon-theme')
+
+const modalWorkPrevArrow = document.querySelectorAll('#modal-work__prev img')
+const modalWorkNextArrow = document.querySelectorAll('#modal-work__next img')
+
+const bulb = document.querySelector('.header__bulb')
+
+if (localStorage.getItem('theme') === null) {
+    localStorage.setItem('theme', 'light')
+}
+
+changeTheme.setAttribute('href', `css/${localStorage.getItem('theme')}-theme.css`)
+changeFavTheme.setAttribute('href', `images/favicon-${localStorage.getItem('theme')}.svg`)
+
+modalWorkPrevArrow.forEach(item => {
+    item.setAttribute('src', `images/icons/back-${localStorage.getItem('theme')}.svg`)
+})
+modalWorkNextArrow.forEach(item => {
+    item.setAttribute('src', `images/icons/next-${localStorage.getItem('theme')}.svg`)
+})
+
+if (localStorage.getItem('theme') === 'dark') {
+    changeTheme.setAttribute('data-theme', 'light')
+}
+
+bulb.addEventListener('click', () => {
+    changeTheme.setAttribute('href', `css/${changeTheme.getAttribute('data-theme')}-theme.css`)
+
+    if (changeTheme.getAttribute('data-theme') === 'dark') {
+        changeTheme.setAttribute('data-theme', 'light')
+        changeFavTheme.setAttribute('href', `images/favicon-dark.svg`)
+        modalWorkPrevArrow.forEach(item => {
+            item.setAttribute('src', `images/icons/back-dark.svg`)
+        })
+        modalWorkNextArrow.forEach(item => {
+            item.setAttribute('src', `images/icons/next-dark.svg`)
+        })
+
+        localStorage.setItem('theme', 'dark')
+    } else {
+        changeTheme.setAttribute('data-theme', 'dark')
+        changeFavTheme.setAttribute('href', `images/favicon-light.svg`)
+        modalWorkPrevArrow.forEach(item => {
+            item.setAttribute('src', `images/icons/back-light.svg`)
+        })
+        modalWorkNextArrow.forEach(item => {
+            item.setAttribute('src', `images/icons/next-light.svg`)
+        })
+
+        localStorage.setItem('theme', 'light')
+    }
+})
+
+/* Inrtro & Header */
+
 const body = document.body
 
 const page = document.querySelector('.page')
@@ -14,38 +72,6 @@ const introBgImages = document.querySelector('.intro__bg--images')
 const introBg = document.querySelectorAll('.intro__bg')
 
 let headerHeight = header.clientHeight
-
-/* Change Theme */
-
-const changeTheme = document.querySelector('#change-theme')
-const changeFavTheme = document.querySelector('#change-favicon-theme')
-
-const bulb = document.querySelector('.header__bulb')
-
-changeTheme.setAttribute('href', `css/${localStorage.getItem('theme')}-theme.css`)
-changeFavTheme.setAttribute('href', `images/favicon-${localStorage.getItem('theme')}.svg`)
-
-if (localStorage.getItem('theme') === 'dark') {
-    changeTheme.setAttribute('data-theme', 'light')
-}
-
-bulb.addEventListener('click', () => {
-    changeTheme.setAttribute('href', `css/${changeTheme.getAttribute('data-theme')}-theme.css`)
-
-    if (changeTheme.getAttribute('data-theme') === 'dark') {
-        changeTheme.setAttribute('data-theme', 'light')
-        changeFavTheme.setAttribute('href', `images/favicon-dark.svg`)
-
-        localStorage.setItem('theme', 'dark')
-    } else {
-        changeTheme.setAttribute('data-theme', 'dark')
-        changeFavTheme.setAttribute('href', `images/favicon-light.svg`)
-
-        localStorage.setItem('theme', 'light')
-    }
-})
-
-/* Inrtro & Header */
 
 function checkScrollPos() {
     if (scrollPos >= intro.clientHeight) {
@@ -321,7 +347,7 @@ const expositionItem = document.querySelectorAll('.exposition__item')
 
 expositionItem.forEach((item, itemPos) => {
     item.addEventListener('click', () => {
-        if (!(modal[itemPos] === undefined)) {
+        if (modal[itemPos] !== undefined) {
             body.style.overflow = 'hidden'
             modalCounter = itemPos
             modal[modalCounter].classList.add('active')
@@ -360,47 +386,47 @@ logoImg.addEventListener('click', Event => {
 
 /* ??? */
 
-window.addEventListener('keydown', Event => {
-    if (Event.key === ']' || Event.key === 'ъ') {
-        if (Event.ctrlKey) {
-            let secret = prompt('Введи код') 
-            console.log(secret)
-            if (secret !== null) {
-                if (secret === '240205__210405') {
-                    window.open('https://www.youtube.com/watch?v=YX5UdrBozms&ab_channel=BRUTTONOSTRA')
-                } else if (secret === 'Полина Рогова' || secret === 'Рогова Полина') {
-                    alert('Крашиха')
-                } else {
-                    alert('Такого не знаем... ¯\_(ツ)_/¯')
-                }
-            }
-        }
-    }
+// window.addEventListener('keydown', Event => {
+//     if (Event.key === ']' || Event.key === 'ъ') {
+//         if (Event.ctrlKey) {
+//             let secret = prompt('Введи код') 
+//             console.log(secret)
+//             if (secret !== null) {
+//                 if (secret === '240205__210405') {
+//                     window.open('111')
+//                 } else if (secret === 'Полина Рогова' || secret === 'Рогова Полина') {
+//                     alert('Крашиха')
+//                 } else {
+//                     alert('Такого не знаем... ¯\_(ツ)_/¯')
+//                 }
+//             }
+//         }
+//     }
     
-    if (Event.code === 'KeyA') {
-        console.log('tps://www.y [2]')
-    }
-    if (Event.code === 'KeyR') {
-        console.log('ht [1]')
-    }
-    if (Event.code === 'Slash') {
-        console.log('outube.c [3]')
-    }
-    if (Event.code === 'Comma') {
-        console.log('om/watch? [4]')
-    }
-    if (Event.code === 'KeyZ') {
-        console.log('v=dQ [5]')
-    }
-    if (Event.code === 'KeyX') {
-        console.log('w4w [6]')
-    }
-    if (Event.code === 'KeyG') {
-        console.log('9WgX [7]')
-    }
-    if (Event.code === 'KeyC') {
-        console.log('cQ [8]')
-    }
-})
+//     if (Event.code === 'KeyA') {
+//         console.log('tps://www.y [2]')
+//     }
+//     if (Event.code === 'KeyR') {
+//         console.log('ht [1]')
+//     }
+//     if (Event.code === 'Slash') {
+//         console.log('outube.c [3]')
+//     }
+//     if (Event.code === 'Comma') {
+//         console.log('om/watch? [4]')
+//     }
+//     if (Event.code === 'KeyZ') {
+//         console.log('v=dQ [5]')
+//     }
+//     if (Event.code === 'KeyX') {
+//         console.log('w4w [6]')
+//     }
+//     if (Event.code === 'KeyG') {
+//         console.log('9WgX [7]')
+//     }
+//     if (Event.code === 'KeyC') {
+//         console.log('cQ [8]')
+//     }
+// })
 
 
