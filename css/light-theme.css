@@ -34,6 +34,10 @@
     }
 }
 
+.swiper-pagination-bullet {
+    background-color: #2F2F2F;
+}
+
 .chronicle__block--cross, .modal__close {
     background-image: url(../images/icons/cross-dark.svg);
 }
